@@ -14,40 +14,55 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#66666666"
             android:layout_weight="0.4"
-            >
-        <RelativeLayout
-            android:id="@id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true">
-            <LinearLayout
-                android:layout_alignParentLeft="true"
+            android:background="#66666666">
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/edit_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffffff"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="">
+                    </TextView>
+                    <EditText
+                        android:id="@+id/edit_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffffff"/>
+                </LinearLayout>
+
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#22222222"
-                    android:text="用户名: ">
+                    android:layout_toLeftOf="@+id/edit_user"
+                    android:text="用户名: "
+                    tools:ignore="NotSibling">
                 </TextView>
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="">
-                </TextView>
-                <TextView
-                    android:id="@+id/pass_word"
+                    android:id="@+id/password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#22222222"
+                    android:layout_toLeftOf="@+id/edit_user"
                     android:text="密码:  ">
                 </TextView>
-            </LinearLayout>
-        </RelativeLayout>
+
+            </RelativeLayout>
 
 
         </RelativeLayout>
@@ -55,48 +70,47 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black"
             android:layout_weight="0.6"
-            android:orientation="horizontal"
+            android:background="@color/black"
             android:gravity="center_horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
-                android:text="    "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.25"
-                />
+                android:text="    " />
+
             <Button
-                android:id="@+id/login"
+                android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=" 登陆 "
                 android:layout_weight="0.25"
-                />
+                android:text=" 登陆 " />
+
             <TextView
-                android:text="    "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.05"
-                />
+                android:text="    " />
+
             <Button
-                android:id="@+id/register"
+                android:id="@+id/btn_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=" 注册 "
                 android:layout_weight="0.25"
-                />
+                android:text=" 注册 " />
+
             <TextView
-                android:text="    "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.25"
-                />
+                android:text="    " />
 
         </LinearLayout>
 
