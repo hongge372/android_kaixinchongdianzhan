@@ -15,7 +15,40 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#66666666"
-            android:layout_weight="0.4">
+            android:layout_weight="0.4"
+            >
+        <RelativeLayout
+            android:id="@id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <LinearLayout
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#22222222"
+                    android:text="用户名: ">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="">
+                </TextView>
+                <TextView
+                    android:id="@+id/pass_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#22222222"
+                    android:text="密码:  ">
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+
 
         </RelativeLayout>
 
