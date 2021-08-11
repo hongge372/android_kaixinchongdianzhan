@@ -36,12 +36,14 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/layout_main_selectors"
-            android:background="#FF7F50">
+            android:layout_below="@+id/layout_main_selectors">
             <LinearLayout
                 android:id="@+id/layout_characters_game"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerHorizontal="true"
                 android:orientation="vertical">
             </LinearLayout>
         </ScrollView>

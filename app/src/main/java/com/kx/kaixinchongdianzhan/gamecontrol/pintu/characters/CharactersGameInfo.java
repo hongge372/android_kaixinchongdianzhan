@@ -22,7 +22,7 @@ public class CharactersGameInfo {
 
     private void init() {
         //todo
-        holeLevel = 64;
+        holeLevel = 256;
         curLevel = 26;
     }
 

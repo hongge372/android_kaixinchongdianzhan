@@ -2,6 +2,7 @@ package com.kx.kaixinchongdianzhan.gamecontrol.pintu.characters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
@@ -46,6 +47,7 @@ public class GamingActivity extends AppCompatActivity implements View.OnClickLis
         switch (view.getId()){
             case R.id.btn_gaming_character:
                 LinearLayout parent = findViewById(R.id.layout_characters_game);
+                parent.setBackgroundColor(Color.YELLOW);
                 CharactersGameSlider slider = new CharactersGameSlider(getApplicationContext(), parent);
                 slider.showView();
                 break;

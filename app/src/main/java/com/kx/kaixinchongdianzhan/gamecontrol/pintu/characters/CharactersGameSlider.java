@@ -2,6 +2,7 @@ package com.kx.kaixinchongdianzhan.gamecontrol.pintu.characters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -15,7 +16,7 @@ import com.kx.kaixinchongdianzhan.R;
 
 public class CharactersGameSlider {
     private String tag = getClass().getName();
-    private int perLine = 3;
+    private int perLine = 4;
     private Context mainContext;
     LinearLayout parentLayout;
 
@@ -35,14 +36,19 @@ public class CharactersGameSlider {
             params.gravity = Gravity.CENTER_HORIZONTAL;
             liner.setLayoutParams(params);
             Button[] buttons = new Button[perLine];
+            int size = 0;
             for(int j=0;j<perLine;j++){
-                String text = "第" + (i+j) + "关";
+                String text = "第" + (i*perLine+j+1) + "关";
                 buttons[j] = new Button(mainContext);
                 buttons[j].setText(text);
-                liner.addView(buttons[j],params);
+                LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                params.weight = 1.0f;
+                buttons[j].setLayoutParams(params);
+                liner.addView(buttons[j]);
             }
-            liner.setBackgroundColor(0xEE82EE);
-            liner.bringToFront();
+            parentLayout.setBackgroundColor(Color.BLUE);
+            liner.setBackgroundColor(Color.YELLOW);
             parentLayout.addView(liner);
         }
     }
