@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.kx.kaixinchongdianzhan.gamecontrol.pintu.characters.CharactersGameSlider;
 import com.kx.kaixinchongdianzhan.gamecontrol.pintu.characters.GamingActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String userAccount;
     private String passWord;
+    private boolean ignoreLogin = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean confirmInfo() {
+        if(ignoreLogin){
+            return true;
+        }
         String repeat = null;
         if(ifRegister){
             userAccount =((EditText)findViewById(R.id.edit_register_account)).getText().toString();
