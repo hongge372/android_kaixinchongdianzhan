@@ -3,6 +3,7 @@ package com.kx.kaixinchongdianzhan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.kx.kaixinchongdianzhan.gamecontrol.pintu.characters.GamingActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnLogin;
@@ -87,7 +90,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginManager.ifRegister = ifRegister;
         loginManager.account = userAccount;
         loginManager.passWord = passWord;
-        loginManager.login();
+        boolean success = loginManager.login();
+        if(success){
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, GamingActivity.class);
+            startActivity(intent);
+        }
     }
 
     private boolean confirmInfo() {

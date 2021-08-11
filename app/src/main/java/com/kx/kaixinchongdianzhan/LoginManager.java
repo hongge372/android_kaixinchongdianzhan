@@ -13,7 +13,7 @@ public class LoginManager {
     public String account;
     public String passWord;
 
-    public void login() {
+    public boolean login() {
         JSONObject loginJson = new JSONObject();
         if(ifRegister){
             Log.e(tag, "user register");
@@ -27,7 +27,7 @@ public class LoginManager {
             e.printStackTrace();
         }
         Log.v(tag, "account: " + account + " pass word: " + passWord);
-
+        return true;
     }
 
     public static boolean ifRational(String data){
