@@ -1,5 +1,6 @@
 package com.kx.kaixinchongdianzhan.gamecontrol.pintu.characters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Layout;
@@ -7,7 +8,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,8 +45,8 @@ public class GamingActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_gaming_character:
-                RelativeLayout layout = (RelativeLayout)findViewById(R.id.layout_main_show);
-                CharactersGameSlider slider = new CharactersGameSlider(getApplicationContext(), layout);
+                LinearLayout parent = findViewById(R.id.layout_characters_game);
+                CharactersGameSlider slider = new CharactersGameSlider(getApplicationContext(), parent);
                 slider.showView();
                 break;
             case R.id.btn_store:

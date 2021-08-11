@@ -33,14 +33,18 @@
                 android:text=" 我 "/>
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/layout_main_show"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/layout_main_selectors"
-            android:layout_centerHorizontal="true"
-            android:background="#FF7F50"
-            />
+            android:background="#FF7F50">
+            <LinearLayout
+                android:id="@+id/layout_characters_game"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
