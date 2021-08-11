@@ -18,48 +18,42 @@
             android:background="#66666666">
 
             <RelativeLayout
+                android:id="@+id/layout_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <EditText
-                        android:id="@+id/edit_user"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffffff"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="">
-                    </TextView>
-                    <EditText
-                        android:id="@+id/edit_password"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffffff"/>
-                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edit_user"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="#ffffffff" />
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/edit_user"
+                    android:layout_marginTop="20dp"
+                    android:background="#ffffffff" />
 
                 <TextView
                     android:id="@+id/user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#22222222"
                     android:layout_toLeftOf="@+id/edit_user"
-                    android:text="用户名: "
-                    tools:ignore="NotSibling">
+                    android:background="#FFFF00"
+                    android:text="用户名: ">
                 </TextView>
 
                 <TextView
                     android:id="@+id/password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#22222222"
                     android:layout_toLeftOf="@+id/edit_user"
-                    android:text="密码:  ">
+                    android:background="#FFFF00"
+                    android:text="fffff密码:  ">
                 </TextView>
 
             </RelativeLayout>
